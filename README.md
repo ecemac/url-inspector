@@ -2,7 +2,7 @@ A React + Go web app that crawls URLs and shows key page info.
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
