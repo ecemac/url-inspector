@@ -1,8 +1,12 @@
 import { useLoaderData } from "react-router";
 import type { Route } from "./+types/url-detail";
 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 export function loader({ params }: Route.LoaderArgs) {
-  // Simulate a backend call or use real fetch later
+  fetch(`${API_BASE_URL}/urls`)
+  .then((res) => res.json())
+  .then((data) => console.log(data));
   const data = {
     id: params.id,
     title: "Example Website",

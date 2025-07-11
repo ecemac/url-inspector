@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-    config.Connect()
+    config.ConnectDB()
     config.DB.AutoMigrate(&models.URL{})
 
     r := gin.Default()

@@ -6,7 +6,9 @@ A React + Go web app that crawls URLs and shows key page info.
 
 ### Prerequisites
 
-- [Docker](https://docs.docker.com/get-docker/) installed on your machine
+This project uses Docker Compose to run the backend, frontend, and database services together.
+
+Before running any commands below, please ensure that [Docker](https://docs.docker.com/get-docker/) and Docker Compose are installed and the Docker daemon is running on your machine.
 
 ---
 
@@ -16,9 +18,9 @@ From the project root, run: ```docker-compose up --build```
 
 This will start three services:
 
-- MySQL database on port 3306
 - Go backend API on port 8080
 - React frontend on port 5173
+- The MySQL database runs inside the Docker network and is configured automatically
 
 ### Access the app
 
