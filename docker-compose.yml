@@ -21,7 +21,11 @@ services:
       DB_DSN: "root:url_inspector_pw@tcp(mysql:3306)/url_inspector?charset=utf8mb4&parseTime=True&loc=Local"
 
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
     ports:
       - "5173:5173"
     depends_on:

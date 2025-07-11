@@ -12,6 +12,7 @@ func AddURL(c *gin.Context) {
     var input struct {
         Address string `json:"address"`
     }
+
     if err := c.ShouldBindJSON(&input); err != nil {
         c.JSON(http.StatusBadRequest, gin.H{"error": "invalid input"})
         return
@@ -23,7 +24,6 @@ func AddURL(c *gin.Context) {
     }
 
     config.DB.Create(&url)
-
     go crawler.Crawl(&url)
 
     c.JSON(http.StatusOK, gin.H{"id": url.ID})

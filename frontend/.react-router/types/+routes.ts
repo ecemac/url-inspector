@@ -25,8 +25,12 @@ type RouteFiles = {
     id: "root";
     page: "/" | "/url-detail/:id";
   };
-  "routes/home.tsx": {
-    id: "routes/home";
+  "layout/header.tsx": {
+    id: "layout/header";
+    page: "/" | "/url-detail/:id";
+  };
+  "routes/dashboard.tsx": {
+    id: "routes/dashboard";
     page: "/";
   };
   "routes/url-detail.tsx": {
